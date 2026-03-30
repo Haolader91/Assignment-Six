@@ -5,17 +5,18 @@ import { CiPlay1 } from "react-icons/ci";
 const Banner = () => {
   return (
     <div>
-      <div className="mt-15">
-        <div className="container mx-auto max-h-screen flex justify-between gap-5">
-          <div className="mt-25">
-            <h2 className="text-[72px] font-bold text-[#101727] p-5">
-              Supercharge Your <br />
+      <div className="my-15">
+        <div className="container mx-auto flex justify-between gap-5 flex-col md:flex-row">
+          <div className="flex flex-col justify-center">
+            <h2 className="text-3xl sm:text-4xl lg:text-[72px] font-bold text-[#101727] p-5">
+              Supercharge Your <br className="hidden md:block" />
               Digital Workflow
             </h2>
             <p className="text-[18px] text-[#627382]">
               Access premium AI tools, design assets, templates, and
-              productivity <br /> software—all in one place. Start creating
-              faster today. <br /> Explore Products
+              productivity <br className="hidden md:block" /> software—all in
+              one place. Start creating faster today.{" "}
+              <br className="hidden md:block" /> Explore Products
             </p>
             <div className="mt-7 flex gap-6">
               <button className="btn p-4 bg-linear-to-r from-[#9514FA] to-[#7127F8] text-white rounded-full">
@@ -29,7 +30,7 @@ const Banner = () => {
               </button>
             </div>
           </div>
-          <div className="">
+          <div className="flex flex-col justify-center">
             <img src={bannerImg} alt="" />
           </div>
         </div>
