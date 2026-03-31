@@ -5,6 +5,7 @@ import NavBar from "./components/Header/NavBar/NavBar";
 import Banner from "./components/Header/Banner/Banner";
 import Rating from "./components/MainBody/Rating/Rating";
 import Card from "./components/MainBody/Card/Card";
+import GetStart from "./components/MainBody/GetStart/GetStart";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <section>
           <Rating></Rating>
           <Card></Card>
+          <GetStart></GetStart>
         </section>
       </main>
     </>
