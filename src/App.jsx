@@ -8,6 +8,7 @@ import Card from "./components/MainBody/Card/Card";
 import GetStart from "./components/MainBody/GetStart/GetStart";
 import Ready from "./components/MainBody/Ready/Ready";
 import Footer from "./components/Footer/Footer";
+import Pricing from "./components/MainBody/Pricing/Pricing";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Rating></Rating>
           <Card></Card>
           <GetStart></GetStart>
+          <Pricing></Pricing>
 
           <Ready></Ready>
         </section>
