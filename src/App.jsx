@@ -7,6 +7,7 @@ import Rating from "./components/MainBody/Rating/Rating";
 import Card from "./components/MainBody/Card/Card";
 import GetStart from "./components/MainBody/GetStart/GetStart";
 import Ready from "./components/MainBody/Ready/Ready";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Ready></Ready>
         </section>
       </main>
+      <Footer></Footer>
     </>
   );
 }
