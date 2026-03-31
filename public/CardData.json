@@ -1,0 +1,109 @@
+[
+  {
+    "id": 1,
+    "name": "Pro Resume Kit",
+    "description": "Advanced resume builder with ATS optimization.",
+    "price": 19,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": ["100+ templates", "ATS optimization", "Export to PDF"],
+    "icon": "FiCheckSquare"
+  },
+  {
+    "id": 2,
+    "name": "Portfolio Builder",
+    "description": "Build your personal portfolio website easily.",
+    "price": 29,
+    "period": "one-time",
+    "tag": "best seller",
+    "tagType": "best seller",
+    "features": ["Custom domains", "Responsive design", "SEO optimized"],
+    "icon": "FiGlobe"
+  },
+  {
+    "id": 3,
+    "name": "Interview Prep Pack",
+    "description": "Prepare for interviews with AI-powered tools.",
+    "price": 9,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": ["Mock interviews", "Common Q&A", "AI feedback"],
+    "icon": "FiMic"
+  },
+  {
+    "id": 4,
+    "name": "Career Growth Plan",
+    "description": "Step-by-step roadmap for your career.",
+    "price": 49,
+    "period": "yearly",
+    "tag": "new",
+    "tagType": "new",
+    "features": ["Career roadmap", "Skill tracking", "Mentor support"],
+    "icon": "FiTrendingUp"
+  },
+  {
+    "id": 5,
+    "name": "Freelancer Toolkit",
+    "description": "Everything you need to start freelancing.",
+    "price": 25,
+    "period": "one-time",
+    "tag": "best seller",
+    "tagType": "best seller",
+    "features": [
+      "Proposal templates",
+      "Client management",
+      "Invoice generator"
+    ],
+    "icon": "FiBriefcase"
+  },
+  {
+    "id": 6,
+    "name": "LinkedIn Optimizer",
+    "description": "Optimize your LinkedIn profile for jobs.",
+    "price": 12,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": [
+      "Profile review",
+      "Keyword optimization",
+      "Headline generator"
+    ],
+    "icon": "FiLinkedin"
+  },
+  {
+    "id": 7,
+    "name": "Design Template Pack",
+    "description": "Premium UI templates for designers.",
+    "price": 39,
+    "period": "one-time",
+    "tag": "new",
+    "tagType": "new",
+    "features": ["Figma files", "UI kits", "Free updates"],
+    "icon": "FiLayers"
+  },
+  {
+    "id": 8,
+    "name": "Coding Interview Prep",
+    "description": "Practice coding problems for interviews.",
+    "price": 15,
+    "period": "monthly",
+    "tag": "best seller",
+    "tagType": "best seller",
+    "features": ["1000+ problems", "Solutions", "Progress tracking"],
+    "icon": "FiCode"
+  },
+  {
+    "id": 9,
+    "name": "All-in-One Career Bundle",
+    "description": "Complete package for job seekers.",
+    "price": 99,
+    "period": "yearly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": ["Resume builder", "Portfolio", "Interview prep"],
+    "icon": "FiPackage"
+  }
+]
