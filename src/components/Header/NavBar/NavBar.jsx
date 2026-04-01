@@ -7,30 +7,33 @@ const NavBar = ({ itemCard }) => {
       <div className="navbar bg-base-100 shadow-sm">
         <div className="container mx-auto flex justify-between">
           <div className="navbar-start">
-            <a className="text-4xl font-bold bg-linear-to-r from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent">
+            <a
+              href="/DigiTools"
+              className="text-4xl font-bold bg-linear-to-r from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent"
+            >
               DigiTools
             </a>
           </div>
           <div className="navbar-center hidden lg:flex">
-            <ul className="menu menu-horizontal px-1 text-xl">
+            <ul className="menu menu-horizontal px-1 text-[18px]">
               <li>
-                <a>Products</a>
+                <a href="/Products">Products</a>
               </li>
               <li>
-                <a>Features</a>
+                <a href="/Features">Features</a>
               </li>
               <li>
-                <a>Pricing</a>
+                <a href="/Pricing">Pricing</a>
               </li>
               <li>
-                <a>Testimonials</a>
+                <a href="/Testimonials">Testimonials</a>
               </li>
               <li>
-                <a>FAQ</a>
+                <a href="/FAQ">FAQ</a>
               </li>
             </ul>
           </div>
-          <div className="navbar-end gap-5 text-xl">
+          <div className="navbar-end gap-5 text-[18px]">
             <span className="relative">
               <FiShoppingCart />
               {itemCard.length > 0 && (

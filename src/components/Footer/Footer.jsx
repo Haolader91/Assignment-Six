@@ -20,22 +20,34 @@ const Footer = () => {
             <h3 className="text-xl font-semibold mb-6">Product</h3>
             <ul className="space-y-4 text-gray-400">
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a
+                  href="/Features"
+                  className="hover:text-white transition-colors"
+                >
                   Features
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a
+                  href="/Pricing"
+                  className="hover:text-white transition-colors"
+                >
                   Pricing
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a
+                  href="/Templates"
+                  className="hover:text-white transition-colors"
+                >
                   Templates
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a
+                  href="/Integrations"
+                  className="hover:text-white transition-colors"
+                >
                   Integrations
                 </a>
               </li>
@@ -46,22 +58,25 @@ const Footer = () => {
             <h3 className="text-xl font-semibold mb-6">Company</h3>
             <ul className="space-y-4 text-gray-400">
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a href="/About" className="hover:text-white transition-colors">
                   About
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a href="/Blog" className="hover:text-white transition-colors">
                   Blog
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a
+                  href="/Careers"
+                  className="hover:text-white transition-colors"
+                >
                   Careers
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a href="/Press" className="hover:text-white transition-colors">
                   Press
                 </a>
               </li>
@@ -72,22 +87,34 @@ const Footer = () => {
             <h3 className="text-xl font-semibold mb-6">Resources</h3>
             <ul className="space-y-4 text-gray-400 mb-8">
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a
+                  href="/Documentation"
+                  className="hover:text-white transition-colors"
+                >
                   Documentation
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a
+                  href="/Help Center"
+                  className="hover:text-white transition-colors"
+                >
                   Help Center
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a
+                  href="/Community"
+                  className="hover:text-white transition-colors"
+                >
                   Community
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a
+                  href="/Contact"
+                  className="hover:text-white transition-colors"
+                >
                   Contact
                 </a>
               </li>
@@ -98,19 +125,19 @@ const Footer = () => {
             </h3>
             <div className="flex gap-4">
               <a
-                href="#"
+                href="/Instagram"
                 className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-black hover:bg-gray-200 transition-all"
               >
                 <FaInstagram />
               </a>
               <a
-                href="#"
+                href="/Facebook"
                 className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-black hover:bg-gray-200 transition-all"
               >
                 <FaFacebookSquare />
               </a>
               <a
-                href="#"
+                href="/Twitter"
                 className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-black hover:bg-gray-200 transition-all"
               >
                 <FaXTwitter />

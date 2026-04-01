@@ -33,11 +33,11 @@ const ProductsCardData = ({ data, idx, itemCard, setItemCard }) => {
   const handlerBuyNow = () => {
     const isFound = itemCard.find((item) => item.id === data.id);
     if (isFound) {
-      toast.error("Already added");
+      toast.error("Already added to cart");
       return;
     }
     setIsBuyNow(true);
-    toast.success("Buy now!");
+    toast("Added to cart!");
     setItemCard([...itemCard, data]);
   };
   return (

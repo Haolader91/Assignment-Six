@@ -9,12 +9,12 @@ const CardData = ({ itemCard, setItemCard }) => {
 
   const handlerAllClear = () => {
     setItemCard([]);
-    toast("All item Delete!");
+    toast.success("Order Placed Successfully!!");
   };
   const handlerDelete = (item) => {
     const filterArray = itemCard.filter((d) => d.id !== item.id);
     setItemCard(filterArray);
-    toast.success("Order Placed Successfully!!");
+    toast.error("Item removed from cart");
   };
   return (
     <div className="container mx-auto px-4 py-10">
