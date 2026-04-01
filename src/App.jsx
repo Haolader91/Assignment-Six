@@ -11,8 +11,8 @@ import Pricing from "./components/MainBody/Pricing/Pricing";
 import { useState } from "react";
 import { ToastContainer } from "react-toastify";
 
-const ProductsCardDataPromise = fetch("../public/ProductsCardData.json").then(
-  (res) => res.json(),
+const ProductsCardDataPromise = fetch("/ProductsCardData.json").then((res) =>
+  res.json(),
 );
 function App() {
   const [activeTab, setActiveTab] = useState("Products");

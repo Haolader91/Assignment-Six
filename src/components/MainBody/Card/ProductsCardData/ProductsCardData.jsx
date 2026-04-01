@@ -5,8 +5,15 @@ import { toast } from "react-toastify";
 const CardData = ({ data, idx, itemCard, setItemCard }) => {
   const [isBuyNow, setIsBuyNow] = useState(false);
   const handlerBuyNow = () => {
-    (setIsBuyNow(true), setItemCard([...itemCard, data]));
+    setIsBuyNow(true);
+
+    const isFound = itemCard.find((item) => item.id === data.id);
+    if (isFound) {
+      toast.error("Already added");
+      return;
+    }
     toast("Buy now!");
+    setItemCard([...itemCard, data]);
   };
   return (
     <div key={idx}>

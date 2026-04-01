@@ -17,7 +17,6 @@ const CardData = ({ itemCard, setItemCard }) => {
   };
   return (
     <div className="container mx-auto px-4 py-10">
-      {/* Main Container */}
       <div className="max-w-4xl mx-auto bg-white border border-gray-100 rounded-[2.5rem] p-8 md:p-12 shadow-sm">
         <h2 className="text-2xl font-bold text-[#101727] mb-8">Your Cart</h2>
 
@@ -29,7 +28,6 @@ const CardData = ({ itemCard, setItemCard }) => {
           </>
         ) : (
           <>
-            {/* Cart Items List */}
             {itemCard.map((item) => (
               <div className="space-y-4">
                 {/* Item 1 */}
@@ -55,7 +53,6 @@ const CardData = ({ itemCard, setItemCard }) => {
               </div>
             ))}
 
-            {/* Total & Checkout Section */}
             <div className="mt-10 pt-8 border-t border-gray-100">
               <div className="flex justify-between items-center mb-10">
                 <span className="text-gray-500 text-lg">Total:</span>
