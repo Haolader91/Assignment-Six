@@ -1,16 +1,35 @@
-# React + Vite
+# My React E-Commerce Cart Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Name
 
-Currently, two official plugins are available:
+### SmartCart UI
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Description
 
-## React Compiler
+This project is SmartCart UI.
+It is built with React.
+Users can browse products and manage cart easily.
+It has nice design and smooth experience.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Technologies Used
 
-## Expanding the ESLint configuration
+React.js
+Tailwind CSS & DaisyUI
+JavaScript (ES6+)
+React-Toastify
+JSON (for product data)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Features
+
+1. Cart System
+   Add, remove product
+   Cart update in navbar
+   Checkout clear cart
+
+2. UI System
+   Toggle product and cart
+   Default product view
+   Empty cart message
+3. Notifications
+   Show toast for actions
+   Button change after add
