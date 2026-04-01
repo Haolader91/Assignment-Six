@@ -1,5 +1,4 @@
 import "./App.css";
-import { FaFacebookSquare } from "react-icons/fa";
 import NavBar from "./components/Header/NavBar/NavBar";
 import Banner from "./components/Header/Banner/Banner";
 import Rating from "./components/MainBody/Rating/Rating";

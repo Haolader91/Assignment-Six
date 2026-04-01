@@ -1,9 +1,35 @@
 import React, { useState } from "react";
 import { IoMdCheckmark } from "react-icons/io";
 import { toast } from "react-toastify";
+import {
+  FiCheckSquare,
+  FiGlobe,
+  FiMic,
+  FiTrendingUp,
+  FiBriefcase,
+  FiLinkedin,
+  FiLayers,
+  FiCode,
+  FiPackage,
+} from "react-icons/fi";
 
-const CardData = ({ data, idx, itemCard, setItemCard }) => {
+const iconUse = {
+  FiCheckSquare: FiCheckSquare,
+  FiGlobe: FiGlobe,
+  FiMic: FiMic,
+  FiTrendingUp: FiTrendingUp,
+  FiBriefcase: FiBriefcase,
+  FiLinkedin: FiLinkedin,
+  FiLayers: FiLayers,
+  FiCode: FiCode,
+  FiPackage: FiPackage,
+};
+
+const ProductsCardData = ({ data, idx, itemCard, setItemCard }) => {
   const [isBuyNow, setIsBuyNow] = useState(false);
+
+  const IconComponent = iconUse[data.icon];
+
   const handlerBuyNow = () => {
     const isFound = itemCard.find((item) => item.id === data.id);
     if (isFound) {
@@ -16,13 +42,13 @@ const CardData = ({ data, idx, itemCard, setItemCard }) => {
   };
   return (
     <div key={idx}>
-      <div className="bg-white border border-gray-100 rounded-3xl p-8 shadow-sm relative font-sans">
+      <div className="bg-white border border-gray-100 rounded-3xl p-8 shadow-sm relative font-sans hover:shadow-xl hover:-translate-y-2 duration-500">
         <div className="absolute top-6 right-6 bg-[#FEF3C7] text-[#D97706] text-sm font-medium px-4 py-1 rounded-full">
           {data?.tag}
         </div>
 
         <div className="w-16 h-16 bg-[#F8FAFC] rounded-full flex items-center justify-center border border-gray-100 mb-6">
-          <span className="text-3xl">📝</span>{" "}
+          <span className="text-3xl">{IconComponent && <IconComponent />}</span>
         </div>
 
         <h2 className="text-2xl font-bold text-[#0F172A] mb-3">{data.name}</h2>
@@ -56,11 +82,11 @@ const CardData = ({ data, idx, itemCard, setItemCard }) => {
               : "bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white"
           }`}
         >
-          {isBuyNow ? "Add to Card" : "Buy Now"}
+          {isBuyNow ? "Add to Cart" : "Buy Now"}
         </button>
       </div>
     </div>
   );
 };
 
-export default CardData;
+export default ProductsCardData;

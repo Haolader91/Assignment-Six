@@ -10,7 +10,9 @@ const Banner = () => {
           <div className="flex flex-col justify-center">
             <h2 className="text-3xl sm:text-4xl lg:text-[72px] font-bold text-[#101727] p-5">
               Supercharge Your <br className="hidden md:block" />
-              Digital Workflow
+              <span className="bg-linear-to-r from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent">
+                Digital Workflow
+              </span>
             </h2>
             <p className="text-[18px] text-[#627382]">
               Access premium AI tools, design assets, templates, and

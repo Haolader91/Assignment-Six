@@ -7,17 +7,15 @@ import { FaXTwitter } from "react-icons/fa6";
 const Footer = () => {
   return (
     <footer className="bg-[#0B1120] text-white py-16 px-6 font-sans">
-      <div className="container mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
-          {/* Logo & Description */}
-          <div className="lg:col-span-2">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-center gap-12 mb-16">
+          <div className="lg:grid-cols-2">
             <h2 className="text-3xl font-bold mb-6">DigiTools</h2>
             <p className="text-gray-400 text-lg leading-relaxed max-w-sm">
               Premium digital tools for creators, professionals, and businesses.
               Work smarter with our suite of powerful tools.
             </p>
           </div>
-
           <div>
             <h3 className="text-xl font-semibold mb-6">Product</h3>
             <ul className="space-y-4 text-gray-400">
@@ -103,21 +101,18 @@ const Footer = () => {
                 href="#"
                 className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-black hover:bg-gray-200 transition-all"
               >
-                {/* <Instagram size={20} /> */}
                 <FaInstagram />
               </a>
               <a
                 href="#"
                 className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-black hover:bg-gray-200 transition-all"
               >
-                {/* <Facebook size={20} /> */}
                 <FaFacebookSquare />
               </a>
               <a
                 href="#"
                 className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-black hover:bg-gray-200 transition-all"
               >
-                {/* <Twitter size={20} /> */}
                 <FaXTwitter />
               </a>
             </div>

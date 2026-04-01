@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "../Card";
 import { toast } from "react-toastify";
+import { BiSolidCartAdd } from "react-icons/bi";
 
 const CardData = ({ itemCard, setItemCard }) => {
   // console.log(itemCard);
@@ -13,7 +14,7 @@ const CardData = ({ itemCard, setItemCard }) => {
   const handlerDelete = (item) => {
     const filterArray = itemCard.filter((d) => d.id !== item.id);
     setItemCard(filterArray);
-    toast("Item Delete!");
+    toast.success("Order Placed Successfully!!");
   };
   return (
     <div className="container mx-auto px-4 py-10">
@@ -22,14 +23,20 @@ const CardData = ({ itemCard, setItemCard }) => {
 
         {itemCard.length === 0 ? (
           <>
-            <div>
-              <h2>card nai</h2>
+            <div className="flex flex-col justify-center items-center h-64">
+              <span className="text-7xl text-[#9514FA]">
+                {/* Icon rendered as text using inline */}
+                <BiSolidCartAdd />
+              </span>
+              <p className="text-gray-600 text-lg mt-4">
+                Your Cart is Currently Empty!!
+              </p>
             </div>
           </>
         ) : (
           <>
-            {itemCard.map((item) => (
-              <div className="space-y-4">
+            {itemCard.map((item, id) => (
+              <div key={id} className="space-y-4">
                 {/* Item 1 */}
                 <div className="flex mb-2 items-center justify-between bg-[#F8FAFC] p-6 rounded-3xl border border-gray-50">
                   <div className="flex items-center gap-5">
