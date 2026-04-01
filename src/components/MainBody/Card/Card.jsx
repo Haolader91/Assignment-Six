@@ -3,12 +3,12 @@ import ProductsCardData from "./ProductsCardData/ProductsCardData";
 import CardToggling from "./CardToggling/CardToggling";
 import CardData from "./CardData/CardData";
 
-const Card = ({ ProductsCardDataPromise, activeTab, setActiveTab }) => {
+const Card = ({ ProductsCardDataPromise, itemCard, setItemCard }) => {
   const ProductsCardDataLoad = use(ProductsCardDataPromise);
   // console.log(cardData);
 
-  const [itemCard, setItemCard] = useState([]);
   // console.log(itemCard);
+  const [activeTab, setActiveTab] = useState("Products");
 
   return (
     <div>

@@ -1,7 +1,7 @@
 import React from "react";
 import { FiShoppingCart } from "react-icons/fi";
 
-const NavBar = ({ cart }) => {
+const NavBar = ({ itemCard }) => {
   return (
     <div>
       <div className="navbar bg-base-100 shadow-sm">
@@ -31,11 +31,13 @@ const NavBar = ({ cart }) => {
             </ul>
           </div>
           <div className="navbar-end gap-5 text-xl">
-            <span>
+            <span className="relative">
               <FiShoppingCart />
-              <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-2 rounded-full">
-                {/* {cart.length} */}
-              </span>
+              {itemCard.length > 0 && (
+                <span className="absolute -top-3 -right-4 bg-red-500 text-white text-xs px-2 rounded-full">
+                  {itemCard.length}
+                </span>
+              )}
             </span>
             <span>Login</span>
             <a className="btn bg-linear-to-r from-[#9514FA] to-[#7127F8] text-white rounded-full">

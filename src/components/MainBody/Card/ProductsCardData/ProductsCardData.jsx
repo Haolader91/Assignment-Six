@@ -5,14 +5,13 @@ import { toast } from "react-toastify";
 const CardData = ({ data, idx, itemCard, setItemCard }) => {
   const [isBuyNow, setIsBuyNow] = useState(false);
   const handlerBuyNow = () => {
-    setIsBuyNow(true);
-
     const isFound = itemCard.find((item) => item.id === data.id);
     if (isFound) {
       toast.error("Already added");
       return;
     }
-    toast("Buy now!");
+    setIsBuyNow(true);
+    toast.success("Buy now!");
     setItemCard([...itemCard, data]);
   };
   return (
@@ -51,7 +50,11 @@ const CardData = ({ data, idx, itemCard, setItemCard }) => {
 
         <button
           onClick={handlerBuyNow}
-          className="w-full bg-[#8B2CFF] hover:bg-[#7A1EEB] text-white font-semibold py-4 rounded-2xl transition-colors duration-300"
+          className={`w-full text-white font-semibold py-4 rounded-2xl transition-colors duration-300 ${
+            isBuyNow
+              ? "bg-green-500 hover:bg-green-600 text-white"
+              : "bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white"
+          }`}
         >
           {isBuyNow ? "Add to Card" : "Buy Now"}
         </button>

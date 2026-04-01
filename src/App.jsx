@@ -15,12 +15,12 @@ const ProductsCardDataPromise = fetch("/ProductsCardData.json").then((res) =>
   res.json(),
 );
 function App() {
-  const [activeTab, setActiveTab] = useState("Products");
-  console.log(activeTab);
+  const [itemCard, setItemCard] = useState([]);
+  // console.log(activeTab);
   return (
     <>
       <header>
-        <NavBar></NavBar>
+        <NavBar itemCard={itemCard}></NavBar>
         <Banner></Banner>
       </header>
       <main>
@@ -28,8 +28,8 @@ function App() {
 
         <Card
           ProductsCardDataPromise={ProductsCardDataPromise}
-          activeTab={activeTab}
-          setActiveTab={setActiveTab}
+          itemCard={itemCard}
+          setItemCard={setItemCard}
         ></Card>
 
         <GetStart></GetStart>
