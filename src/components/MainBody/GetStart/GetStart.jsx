@@ -2,7 +2,7 @@ import React, { Suspense } from "react";
 import { UserPlus, Package, Rocket } from "lucide-react";
 import GetStartIcons from "./GetStartIcons/GetStartIcons";
 
-const getStartCardPromise = fetch("/public/GetStartCard.json").then((res) =>
+const getStartCardPromise = fetch("/GetStartCard.json").then((res) =>
   res.json(),
 );
 

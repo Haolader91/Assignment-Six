@@ -1,10 +1,15 @@
-import React, { Suspense } from "react";
+import { use, useState } from "react";
+import ProductsCardData from "./ProductsCardData/ProductsCardData";
 import CardToggling from "./CardToggling/CardToggling";
 import CardData from "./CardData/CardData";
 
-const cardDataPromise = fetch("CardData.json").then((res) => res.json());
+const Card = ({ ProductsCardDataPromise, activeTab, setActiveTab }) => {
+  const ProductsCardDataLoad = use(ProductsCardDataPromise);
+  // console.log(cardData);
 
-const Card = () => {
+  const [itemCard, setItemCard] = useState([]);
+  // console.log(itemCard);
+
   return (
     <div>
       <div className="text-center mt-20">
@@ -15,14 +20,33 @@ const Card = () => {
           Choose from our curated collection of premium digital products
           designed <br /> to boost your productivity and creativity.
         </p>
+        {/* <ToggleSwitch></ToggleSwitch> */}
       </div>
 
-      <CardToggling></CardToggling>
-      <Suspense
-        fallback={<span className="loading loading-spinner text-error"></span>}
-      >
-        <CardData cardDataPromise={cardDataPromise}></CardData>
-      </Suspense>
+      <CardToggling
+        activeTab={activeTab}
+        setActiveTab={setActiveTab}
+        itemCard={itemCard}
+      ></CardToggling>
+
+      {activeTab === "Card" ? (
+        <CardData itemCard={itemCard} setItemCard={setItemCard}></CardData>
+      ) : null}
+
+      {/* Card  */}
+      {activeTab === "Products" ? (
+        <div className="grid grid-cols-3 container mx-auto gap-5 my-10">
+          {ProductsCardDataLoad.map((data, idx) => (
+            <ProductsCardData
+              key={idx}
+              data={data}
+              idx={idx}
+              itemCard={itemCard}
+              setItemCard={setItemCard}
+            ></ProductsCardData>
+          ))}
+        </div>
+      ) : null}
     </div>
   );
 };

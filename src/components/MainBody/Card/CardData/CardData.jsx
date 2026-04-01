@@ -1,89 +1,78 @@
-import React, { use } from "react";
-import { IoMdCheckmark } from "react-icons/io";
+import React from "react";
+import Card from "../Card";
+import { toast } from "react-toastify";
 
-import {
-  FiCheckSquare,
-  FiGlobe,
-  FiMic,
-  FiTrendingUp,
-  FiBriefcase,
-  FiLinkedin,
-  FiLayers,
-  FiCode,
-  FiPackage,
-} from "react-icons/fi";
-const iconMap = {
-  FiCheckSquare: FiCheckSquare,
-  FiGlobe: FiGlobe,
-  FiMic: FiMic,
-  FiTrendingUp: FiTrendingUp,
-  FiBriefcase: FiBriefcase,
-  FiLinkedin: FiLinkedin,
-  FiLayers: FiLayers,
-  FiCode: FiCode,
-  FiPackage: FiPackage,
-};
+const CardData = ({ itemCard, setItemCard }) => {
+  // console.log(itemCard);
+  const totalPrice = itemCard.reduce((sum, item) => sum + item.price, 0);
 
-const CardData = ({ cardDataPromise }) => {
-  const cardDisplay = use(cardDataPromise);
-
-  //   console.log(cardDataPromise);
+  const handlerAllClear = () => {
+    setItemCard([]);
+    toast("All item Delete!");
+  };
+  const handlerDelete = (item) => {
+    const filterArray = itemCard.filter((d) => d.id !== item.id);
+    setItemCard(filterArray);
+    toast("Item Delete!");
+  };
   return (
-    <div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 container mx-auto gap-8">
-        {cardDisplay.map((data, ind) => {
-          const IconComponent = iconMap[data.icon];
-          return (
-            <div
-              key={ind}
-              className="bg-white border border-gray-100 rounded-3xl p-8 shadow-sm relative"
-            >
-              <div className="absolute top-6 right-6 bg-[#FEF3C7] text-[#D97706] text-sm font-medium px-4 py-1 rounded-full">
-                {data.tagType}
+    <div className="container mx-auto px-4 py-10">
+      {/* Main Container */}
+      <div className="max-w-4xl mx-auto bg-white border border-gray-100 rounded-[2.5rem] p-8 md:p-12 shadow-sm">
+        <h2 className="text-2xl font-bold text-[#101727] mb-8">Your Cart</h2>
+
+        {itemCard.length === 0 ? (
+          <>
+            <div>
+              <h2>card nai</h2>
+            </div>
+          </>
+        ) : (
+          <>
+            {/* Cart Items List */}
+            {itemCard.map((item) => (
+              <div className="space-y-4">
+                {/* Item 1 */}
+                <div className="flex mb-2 items-center justify-between bg-[#F8FAFC] p-6 rounded-3xl border border-gray-50">
+                  <div className="flex items-center gap-5">
+                    <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-3xl shadow-sm border border-gray-100">
+                      📝
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-[#101727]">
+                        {item.name}
+                      </h3>
+                      <p className="text-gray-500 font-medium">${item.price}</p>
+                    </div>
+                  </div>
+                  <button
+                    onClick={() => handlerDelete(item)}
+                    className="text-[#FF4D8D] font-semibold hover:underline"
+                  >
+                    Remove
+                  </button>
+                </div>
               </div>
+            ))}
 
-              <div className="w-16 h-16 bg-[#F8FAFC] rounded-full flex items-center justify-center border border-gray-100 mb-6">
-                <span className="text-3xl">{<IconComponent />}</span>
-              </div>
-
-              <h2 className="text-2xl font-bold text-[#0F172A] mb-3">
-                {data.name}
-              </h2>
-              <p className="text-gray-500 leading-relaxed mb-6">
-                {data.description}
-              </p>
-
-              <div className="flex items-baseline gap-1 mb-8">
-                <span className="text-3xl font-bold text-[#0F172A]">
-                  ${data.price}
+            {/* Total & Checkout Section */}
+            <div className="mt-10 pt-8 border-t border-gray-100">
+              <div className="flex justify-between items-center mb-10">
+                <span className="text-gray-500 text-lg">Total:</span>
+                <span className="text-4xl font-bold text-[#101727]">
+                  ${totalPrice}
                 </span>
-                <span className="text-gray-400 font-medium">
-                  /{data.period}
-                </span>
               </div>
 
-              <ul className="space-y-4 mb-10">
-                {data.features.map((feature, idx) => {
-                  return (
-                    <li
-                      key={idx}
-                      className="flex items-center gap-3 text-gray-600"
-                    >
-                      <span className="text-[#30B868] text-2xl">
-                        <IoMdCheckmark />
-                      </span>
-                      {feature}
-                    </li>
-                  );
-                })}
-              </ul>
-
-              <button className="w-full btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white font-semibold py-6 rounded-full">
-                Buy Now
+              <button
+                onClick={handlerAllClear}
+                className="w-full bg-[#8B2CFF] hover:bg-[#7A1EEB] text-white text-lg font-bold py-5 rounded-2xl transition-all shadow-lg shadow-purple-100 active:scale-[0.98]"
+              >
+                Proceed To Checkout
               </button>
             </div>
-          );
-        })}
+          </>
+        )}
       </div>
     </div>
   );

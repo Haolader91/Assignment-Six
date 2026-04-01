@@ -3,7 +3,7 @@ import { FaCheck } from "react-icons/fa";
 
 const PricingCard = ({ pricingCardPromise }) => {
   const pricingCardLoad = use(pricingCardPromise);
-  console.log(pricingCardLoad);
+  // console.log(pricingCardLoad);
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch container mx-auto">

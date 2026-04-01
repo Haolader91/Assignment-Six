@@ -1,8 +1,6 @@
 import React, { Suspense } from "react";
 import PricingCard from "./PricingCard/PricingCard";
-const pricingCardPromise = fetch("/public/Pricing.json").then((res) =>
-  res.json(),
-);
+const pricingCardPromise = fetch("/Pricing.json").then((res) => res.json());
 const Pricing = () => {
   return (
     <section className="py-20 px-6 bg-slate-50 font-sans">
